@@ -1,0 +1,51 @@
+{
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    "indent": [true, "spaces", 4],
+    "arrow-parens": false,
+    "arrow-return-shorthand": [true],
+    "comment-format": [true, "check-space"],
+    "import-blacklist": [true, "rxjs"],
+    "interface-over-type-literal": false,
+    "max-line-length": [true, 140],
+    "member-access": false,
+    "member-ordering": [true, {
+      "order": "fields-first"
+    }],
+    "newline-before-return": false,
+    "no-console": false,
+    "no-any": false,
+    "no-empty-interface": true,
+    "interface-name": [true, "never-prefix"],
+    "no-inferrable-types": [true, "ignore-params", "ignore-properties"],
+    "no-invalid-this": [true, "check-function-in-method"],
+    "no-null-keyword": false,
+    "no-require-imports": false,
+    "no-submodule-imports": false,
+    "no-var-requires": false,
+    "no-switch-case-fall-through": true,
+    "no-trailing-whitespace": true,
+    "no-string-literal": false,
+    "no-this-assignment": [true, {
+      "allow-destructuring": true
+    }],
+    "no-unused-variable": [false, "react"],
+    "jsx-wrap-multiline": false,
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false,
+    "curly": [true, "ignore-same-line"],
+    "object-literal-sort-keys": false,
+    "object-literal-shorthand": false,
+    "one-variable-per-declaration": [false],
+    "only-arrow-functions": [true, "allow-declarations"],
+    "no-consecutive-blank-lines": [true, 2], // number of maximum allowed sequential blanks specified.
+    "ordered-imports": [false],
+    "prefer-method-signature": false,
+    "prefer-template": [true, "allow-single-concat"],
+    "semicolon": [true, "always"],
+    "quotemark": [true, "single", "jsx-double"],
+    "triple-equals": [true, "allow-null-check"],
+    "typedef": [false, "parameter", "property-declaration"],
+    "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case", "allow-leading-underscore"]
+  }
+}
