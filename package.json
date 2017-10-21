@@ -1,8 +1,8 @@
 {
-  "name": "cap-item-manager",
+  "name": "hotdevstack",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/HotCustard/CapItemManager.git",
+  "repository": "https://github.com/HotCustard/HotDevStack.git",
   "author": "<support@hotcustard.co.uk>",
   "license": "MIT",
   "private": true,

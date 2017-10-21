@@ -3,9 +3,6 @@ import webpack = require('webpack');
 import Dotenv = require('dotenv-webpack');
 import HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
-console.log(`Processing with AUTH0_CLIENT_ID : ${process.env.AUTH0_CLIENT_ID}`);
-
 const config: webpack.Configuration = {
   devtool: 'cheap-module-source-map',
   entry: [
@@ -37,11 +34,10 @@ const config: webpack.Configuration = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    // new webpack.DefinePlugin({ 'global.GENTLY': false }),
     new HtmlWebpackPlugin({
       title: 'Hot Development Stack',
       template: path.join(__dirname, 'src', 'index.html'),
-     // favicon:  path.join(__dirname, 'src', 'favicon.ico'),
+      favicon:  path.join(__dirname, 'src', 'favicon.ico'),
       meta: [
         {
           name: 'description',
@@ -52,9 +48,6 @@ const config: webpack.Configuration = {
         collapseWhitespace: true,
       },
     }),
-    // new InlineChunkManifestHtmlWebpackPlugin({
-    //   dropAsset: true,
-    // }),
   ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.css', '.scss', '.json'],
@@ -89,14 +82,14 @@ const config: webpack.Configuration = {
       },
       {
         test: /\.css?$/,
-        use: [{loader: 'style-loader'},      // creates style nodes from JS strings
-             {loader: 'css-loader'}],         // translates CSS into CommonJS
+        use: [{loader: 'style-loader'},
+             {loader: 'css-loader'}],
       },
       {
         test: /\.scss$/,
-        use: [{loader: 'style-loader'},      // creates style nodes from JS strings
-             {loader: 'css-loader'},         // translates CSS into CommonJS
-             {loader: 'sass-loader'}],       // compiles Sass to CSS
+        use: [{loader: 'style-loader'},
+             {loader: 'css-loader'},
+             {loader: 'sass-loader'}],
       },
       {
         test: /\.(jpe?g|png|gif|svg|ico)$/,
